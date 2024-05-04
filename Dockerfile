@@ -1,8 +1,9 @@
-ARG BASE_KC_VERSION
+ARG BASE_KC_VERSION="24.0.3"
 FROM quay.io/keycloak/keycloak:${BASE_KC_VERSION} as builder
 
 ENV KC_DB=postgres
 ENV KC_CACHE_STACK=kubernetes
+ENV KC_FEATURES_ENABLED=token-exchange
 ENV KC_FEATURES_DISABLED=kerberos 
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true

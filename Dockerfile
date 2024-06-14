@@ -7,6 +7,7 @@ ENV KC_FEATURES_ENABLED=token-exchange,persistent-user-sessions,dpop,passkeys
 ENV KC_FEATURES_DISABLED=kerberos 
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
+ENV KC_TRANSACTION_XA_ENABLED=false
 
 WORKDIR /opt/keycloak
 RUN /opt/keycloak/bin/kc.sh build

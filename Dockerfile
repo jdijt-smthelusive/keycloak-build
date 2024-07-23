@@ -1,4 +1,4 @@
-ARG BASE_KC_VERSION="25.0.1"
+ARG BASE_KC_VERSION="25.0.2"
 FROM quay.io/keycloak/keycloak:${BASE_KC_VERSION} as builder
 
 ENV KC_DB=postgres
